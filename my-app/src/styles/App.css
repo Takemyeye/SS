@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    a {
+    text-decoration: none; /* Link linea sotto + color-_-*/
+    color: inherit;
+    max-width: 145px;
+    }
+    
+    body {
+    background: url(Art-1/backg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-padding-top: 1.25rem;
+    }
+    .background {
+      background-color:rgba(0, 0, 0, 0.24) ;
+      width: 100%;
+      height: 100vh;
+    }
+    .title {
+    
+    color: #b4a9a9;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    font-size: 50px;
+    left: calc(50% - 50px);
+    top: 2px;
+    }
+    .title:hover{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    color: #fff;
+    text-shadow: 0px 0px 10px;
+    }
+
+    .accessButton {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+        width: 12rem;
+        height: auto;
+        top: 6px;
+        right: 10px;
+       }
+       .user{
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left:7px;
+        font-size: 38px;
+        color: #b4a9a9;
+       }
+
+      .accessButton .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #282936;
+        border-radius: 1.625rem;
+       }
+
+       .accessButton .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+       }
+
+      .accessButton .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+       }
+
+       .accessButton .buttontext {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #b4a9a9; 
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+       }
+
+    .accessButton:hover .circle {
+        width: 100%;
+       }
+
+    .accessButton:hover .circle .icon{
+        background: #fff;
+        transform: translate(1rem, 0);
+       }
+
+    .accessButton:hover .buttontext {
+        color: #fff;
+        text-shadow: 0px 0px 5px;
+       }
+    .accessButton:hover .user{
+        color: #fff;
+        text-shadow: 0px 0px 5px;
+    }
+    /*top panel set blur trasparent blur 2px*/
+    .topPanel {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+    }
+    
+    .leftPanel {
+      position: absolute;
+      flex-wrap: wrap;
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      gap: 15px;
+      width: calc(200px - 16px);
+      min-height: calc(100vh - 60px);
+      height: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      animation: slideIn 1s ease-in-out infinite;
+      visibility: hidden; /* Скрываем панель */
+      opacity: 0; /* Скрываем панель */
+      transition: visibility 2s, opacity 0.5s; /* Добавляем анимацию для плавного появления */
+  }
+  
+  .leftPanel.open {
+      visibility: visible; /* Показываем панель */
+      opacity: 1; /* Показываем панель */
+  }
+    
+    .btn {
+        position: absolute;
+        top: 70px;
+        left: 17px;
+        z-index: 1;
+        width: 150px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        transition: all 0.5s ease-in-out;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background: #282936;
+        color: #b4a9a9;
+      }
+      
+      .btn:hover {
+        box-shadow: 0 0 20px 0px #2e2e2e3a;
+      }
+      
+      .btn .icon {
+        position: absolute;
+        height: 40px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+      }
+      
+      .btn .text {
+        transform: translateX(55px);
+      }
+      
+      .btn:hover .icon {
+        width: 175px;
+      }
+      
+      .btn:hover .text {
+        transition: all 0.5s;
+        opacity: 0;
+      }
+      
+      .btn:focus {
+        outline: none;
+      }
+      
+      .btn:active .icon {
+        transform: scale(0.85);
+      }
+    
+    .socium{
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        color: #b4a9a9; 
+        justify-content: center;
+        align-items:center;
+        display: flex;
+        border-radius: 10px;
+        font-size: 36px;
+        gap: 20px;
+    }
+    .topPanelAccess {
+        width: 170px;
+        height: 40px;
+        background: #282936;
+        position: relative;
+        border-radius: 65px;
+        top: 10px;
+        left: 10px;
+        border: 2px solid #282936;
+    }
+    .topPanelAccess:hover .socium{
+        color: #fff;
+        text-shadow: 0px 0px 5px;
+    }
+    
+    .block-text{
+        position: absolute;
+        top: 250px;
+        left: calc(50% - 250px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        max-width: calc(100% - 184px);
+        max-height: calc(100vh - 60px);
+        height: 150px;
+        width: 700px;
+        background-color: #0f0f0f8c;
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+        cursor: default;
+    }
+    .conteiner{
+        position: absolute;
+        display: flex;
+        left: calc(50% - 250px );
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #b4a9a9;
+        width:700px;
+        height: auto;
+      }
+      .Text-span{
+        position: absolute;
+        display: flex;
+        background: linear-gradient(to right, #5d4157, #a8caba);
+        background-clip: text;
+       -webkit-text-fill-color: transparent;
+        font-weight: 500;
+      }
+      #changingPhrase {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #b4a9a9;
+        font-weight: 500;
+        width: 700px;
+        height: auto;
+        animation: changeText 5s ease infinite;
+    }
+        
+          @keyframes changeText {
+        0% { 
+            opacity: 0; 
+        }
+        30% {
+             opacity: 1; 
+        }
+        100% { 
+            opacity: 0; 
+        }
+          }
+    
+    .AM {
+        position: relative;
+        top: 60px;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        color: #b4a9a9;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-shadow: 0px 0px 10px;
+    }
+    
+    .animemanga {
+        color: #0f0f0f;
+        position: relative;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background: #282936;
+        border-radius: 20px;
+        width: 140px;
+        height: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border: 2px solid #282936;
+    }
+      
+    .animemanga:hover {
+        border-color: rgb(69, 73, 124);
+        box-shadow: 0 0 20px rgb(69, 73, 124);
+      }
+      
+    .animemanga:active {
+        box-shadow: 0 0 10px rgb(69, 73, 124);
+      }
+    .animemanga:hover{
+    color: #fff;
+    text-shadow: 0px 0px 5px;
+    }
+    
+    #mySplide{
+      position: absolute;
+      top: 20%;
+      left: 15%;
+    }
+    
+    .splide__slide img{
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    .splide__list{
+      transition: filter 0.5s ease-in-out;
+      align-items: center;
+    }
+    
+    .splide__slide:hover {
+      z-index: 1;
+      transform: scale(1.1);
+      border-radius: 10px;
+    }
+    
+    .splide__slide.splide__slide--active {
+      transform: scale(1.1);
+      z-index: 2;
+    }      
