@@ -1,0 +1,110 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .line-to-right{
+    position: absolute;
+    top: 40%;
+    left: 39%;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 0px 10px;
+    animation: line-to-right 5s ease-in-out infinite;
+  }
+@keyframes line-to-right{
+    0%{
+        left: 39%;
+        text-shadow: 0px 0px 10px;
+    }
+    100%{
+        left: 60%;
+        text-shadow: 0px 0px 10px;
+}
+
+  }
+
+  .line-to-left{
+    position: absolute;
+    top: 54%;
+    left: 60%;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 0px 10px;
+    animation: line-to-left 5s ease-in-out infinite;
+  }
+@keyframes line-to-left{
+    0%{
+        left: 60%;
+        text-shadow: 0px 0px 10px;
+    }
+    100%{
+        left: 39%;
+        text-shadow: 0px 0px 10px;
+}
+
+  }
+  .loader{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    color: gray;
+    animation: preloader-color 5s linear forwards;
+  }
+
+@keyframes preloader-color{
+    0%{
+        color: rgb(212, 212, 212);
+       opacity: -1; 
+    }
+    30%{
+        opacity: 1;
+        color: black;
+    }
+    35%{
+        color: white;
+        text-shadow: 0px 0px 10px;
+    }
+    45%{
+        color: black;
+    }
+    55%{
+         color: white;
+         text-shadow: 0px 0px 10px;
+    }
+    100%{
+        text-shadow: 0px 0px 10px;
+    }
+  }
+
+  .loader span:nth-child(1) {
+    animation: preloader-color 2.4s linear forwards 0s;
+  }
+  .loader span:nth-child(2) {
+    animation: preloader-color 2.4s linear forwards 0.2s;
+  }
+  .loader span:nth-child(3) {
+    animation: preloader-color 2.4s linear forwards 0.4s;
+  }
+  .loader span:nth-child(4) {
+    animation: preloader-color 2.4s linear forwards 0.6s;
+  }
+  .loader span:nth-child(5) {
+    animation: preloader-color 2.4s linear forwards 0.8s;
+  }
+  .loader span:nth-child(6) {
+    animation: preloader-color 2.4s linear forwards 0.9s;
+  }
+  .loader span:nth-child(7) {
+    animation: preloader-color 2.4s linear forwards 1s;
+  }
+  .loader span:nth-child(8) {
+    animation: preloader-color 2.4s linear forwards 1.2s;
+  }

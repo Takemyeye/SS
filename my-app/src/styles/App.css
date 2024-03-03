@@ -22,19 +22,20 @@
       height: 100vh;
     }
     .title {
-    
     color: #b4a9a9;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: absolute;
     font-size: 50px;
     left: calc(50% - 50px);
     top: 2px;
+    font-weight: bold;
     }
-    .title:hover{
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    color: #fff;
-    text-shadow: 0px 0px 10px;
+    .title:hover {
+      transition: color 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      color: #fff;
+      text-shadow: 0px 0px 10px;
     }
+    
 
     .accessButton {
         position: absolute;
@@ -244,8 +245,6 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        max-width: calc(100% - 184px);
-        max-height: calc(100vh - 60px);
         height: 150px;
         width: 700px;
         background-color: #0f0f0f8c;
@@ -338,36 +337,36 @@
         box-shadow: 0 0 10px rgb(69, 73, 124);
       }
     .animemanga:hover{
-    color: #fff;
-    text-shadow: 0px 0px 5px;
+        color: #fff;
+        text-shadow: 0px 0px 5px;
     }
     
     #mySplide{
-      position: absolute;
-      top: 20%;
-      left: 15%;
+        position: absolute;
+        top: 20%;
+       left: 15%;
     }
     
     .splide__slide img{
-      width: 100%;
-      max-width: 400px;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
+       width: 100%;
+        max-width: 400px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
     }
     
     .splide__list{
-      transition: filter 0.5s ease-in-out;
-      align-items: center;
+       transition: filter 0.5s ease-in-out;
+        align-items: center;
     }
     
     .splide__slide:hover {
-      z-index: 1;
-      transform: scale(1.1);
-      border-radius: 10px;
+       z-index: 1;
+       transform: scale(1.1);
+       border-radius: 10px;
     }
     
     .splide__slide.splide__slide--active {
-      transform: scale(1.1);
-      z-index: 2;
-    }      
+       transform: scale(1.1);
+        z-index: 2;
+    }  

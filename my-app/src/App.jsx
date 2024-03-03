@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './styles/App.css';
+import './styles/Preloader.css'
+import MyComponent from './components/Mycomponent';
 import { JJK } from './components/JJK';
 import { MHA } from './components/MHA';
 import { CON } from './components/CON';
-import { Home } from './components/Home';
-
 const App = () => {
   const [isLeftPanelOpen, setIsLeftPanelOpen] = useState(() => {
     return JSON.parse(localStorage.getItem('isLeftPanelOpen')) || false;
@@ -36,12 +36,14 @@ const App = () => {
           </div>
 
           <button className='accessButton'>
-            <span className="circle" aria-hidden="true">
-              <div className="user">
-                <i className="fa-regular fa-user"></i>
-              </div>
-            </span>
-            <span className="buttontext">Access</span> 
+            <Link to = "/UpIn">
+             <span className="circle" aria-hidden="true">
+                <div className="user">
+                  <i className="fa-regular fa-user"></i>
+                 </div>
+               </span>
+             <span className="buttontext">Access</span> 
+            </Link>
           </button>
 
           <div className="title"><Link to="/">SoulSwap</Link>
@@ -73,15 +75,15 @@ const App = () => {
             </div>
           </div>
         </div>
-
+        
+          </div>
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={<MyComponent/>} />
           <Route exact path='/JJK' element={<JJK />} />
           <Route exact path='/MHA' element={<MHA />} />
           <Route exact path='/CON' element={<CON />} />
         </Routes>
-          </div>
-          </Router>
+    </Router>
   );
 };
 

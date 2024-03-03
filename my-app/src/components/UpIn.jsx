@@ -1,43 +1,41 @@
-export const UpIn = () => {
+
+{/*import React from 'react';
+import { OAuth2 } from 'discord-oauth2';
+
+const oauth2 = new OAuth2({
+  clientId: 'NTI0OTk0ODE5NjkzNDc3OTE4.GKQ9aW.a4_36aIhmlJbT38-NnpuqXgQppTX4YUveR2_5o',
+  clientSecret: 'NTI0OTk0ODE5NjkzNDc3OTE4.GKQ9aW.a4_36aIhmlJbT38-NnpuqXgQppTX4YUveR2_5o',
+  redirectUri: 'http://localhost:3000/callback'
+});
+
+const AuthComponent = () => {
+  const handleLogin = () => {
+    window.location.href = oauth2.authorizationUrl({ scope: ['identify'] });
+  };
+
   return (
-      <div id="MainWalpaper">
-        <div className="Home" ></div>
-        <div id="ssupin">
-          <div className="container" id="container">
-            <div className="form-container sign-up-container">
-              <form action="#">
-                <h1>Create Account</h1>
-                <input type="text" placeholder="Name" id="name" />
-                <input type="email" placeholder="Email" id="email" />
-                <input type="password" placeholder="Password" id="password" />
-                <button id="Upbutton" type="submit">Sign Up</button>
-              </form>
-            </div>
-            <div className="form-container sign-in-container">
-              <form action="#">
-                <h1>Sign in</h1>
-                <input type="email" placeholder="Email" id="emailIn" />
-                <input type="password" placeholder="Password" id="passwordIn" />
-                <a href="#">Forgot your password?</a>
-                <button id="Inbutton" type="submit">Sign In</button>
-              </form>
-            </div>
-            <div className="overlay-container">
-              <div className="overlay">
-                <div className="overlay-panel overlay-left">
-                  <h1>Welcome Back!</h1>
-                  <p>To keep connected with us please login with your personal info</p>
-                  <button className="ghost" id="signIn">Sign In</button>
-                </div>
-                <div className="overlay-panel overlay-right">
-                  <h1>Hi,Dude!</h1>
-                  <p>Enter your personal details and start journey with us</p>
-                  <button className="ghost" id="signUp">Sign Up</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="container">
+      <form>
+        <p>Welcome</p>
+        <input type="email" placeholder="Email" /><br />
+        <input type="password" placeholder="Password" /><br />
+        <input type="button" value="Sign in" /><br />
+        <a href="#">Forgot Password?</a>
+      </form>
+
+      <div className="drops">
+        <div className="drop drop-1"></div>
+        <div className="drop drop-2"></div>
+        <div className="drop drop-3"></div>
+        <div className="drop drop-4"></div>
+        <div className="drop drop-5"></div>
       </div>
+
+      <div className='in'>
+        <button onClick={handleLogin}>Войти через Discord</button>
+      </div>
+    </div>
   );
 };
+
+export default AuthComponent;*/}
