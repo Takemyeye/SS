@@ -125,7 +125,7 @@
         color: #fff;
         text-shadow: 0px 0px 5px;
     }
-    /*top panel set blur trasparent blur 2px*/
+    
     .topPanel {
         display: flex;
         width: 100%;
@@ -149,7 +149,7 @@
       animation: slideIn 1s ease-in-out infinite;
       visibility: hidden; /* Скрываем панель */
       opacity: 0; /* Скрываем панель */
-      transition: visibility 2s, opacity 0.5s; /* Добавляем анимацию для плавного появления */
+      transition: visibility 2s, opacity 0.5s;
   }
   
   .leftPanel.open {
@@ -175,6 +175,7 @@
         border-radius: 10px;
         background: #282936;
         color: #b4a9a9;
+        cursor: pointer;
       }
       
       .btn:hover {
@@ -326,47 +327,119 @@
         font-size: 20px;
         cursor: pointer;
         border: 2px solid #282936;
-    }
-      
-    .animemanga:hover {
-        border-color: rgb(69, 73, 124);
-        box-shadow: 0 0 20px rgb(69, 73, 124);
-      }
-      
+    }  
     .animemanga:active {
         box-shadow: 0 0 10px rgb(69, 73, 124);
       }
     .animemanga:hover{
         color: #fff;
         text-shadow: 0px 0px 5px;
+        border-color: rgb(69, 73, 124);
+        box-shadow: 0 0 20px rgb(69, 73, 124);
     }
     
     #mySplide{
         position: absolute;
         top: 20%;
-       left: 15%;
+        left: 15%;
     }
-    
     .splide__slide img{
-       width: 100%;
+        position: relative;
+        width: 100%;
         max-width: 400px;
-        height: 100%;
+        height: 500px;
+        border-radius: 20px;
         object-fit: cover;
-        border-radius: 10px;
     }
-    
     .splide__list{
-       transition: filter 0.5s ease-in-out;
+        transition: filter 0.5s ease-in-out;
         align-items: center;
     }
     
-    .splide__slide:hover {
-       z-index: 1;
-       transform: scale(1.1);
-       border-radius: 10px;
+    .hover-info {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       position: absolute;
+       width: 400px;
+       height: 100px;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       border-radius: 20px;
+       background-color: transparent;
+       backdrop-filter: blur(6px);
+       opacity: 0;
+       transition: opacity 1s, transform 1s ease-in-out;
+    }
+    .splide__slide:hover .hover-info {
+       opacity: 1; 
+    }
+    .background-price{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 60px;
+      border-radius: 20px;
+      background-color: #282936;
+      border:  2px solid #282936;
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    }
+    .background-price:hover{
+      border-color: rgb(69, 73, 124);
+      box-shadow: 0 0 20px rgb(69, 73, 124);
+    }
+    .background-price:active{
+      box-shadow: 0 0 10px rgb(69, 73, 124);
+    }
+    .price{
+      position: relative;
+      display: flex;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 30px;
+      color: #b4a9a9;
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     }
     
-    .splide__slide.splide__slide--active {
-       transform: scale(1.1);
-        z-index: 2;
-    }  
+    .price:hover{
+      color: #fff;
+      text-shadow: 0px 0px 5px;
+    }
+    
+    .background-Fa-Shop{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      background-color: #282936;
+      right: 10px;
+      background-color: #282936;
+      border:  2px solid #282936;
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    }
+    .background-Fa-Shop:hover{
+      border-color: rgb(69, 73, 124);
+      box-shadow: 0 0 20px rgb(69, 73, 124);
+    }
+    .background-Fa-Shop:active{
+      box-shadow: 0 0 10px rgb(69, 73, 124);
+    }
+    .Fa-Shop{
+      display: flex;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .Fa-Shop:hover{
+      color: #fff;
+      text-shadow: 0px 0px 10px;
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    }
