@@ -6,6 +6,9 @@ import MyComponent from './components/Mycomponent';
 import { JJK } from './components/JJK';
 import { MHA } from './components/MHA';
 import { CON } from './components/CON';
+import  Register  from './components/Register';
+import Home from './components/Home';
+
 const App = () => {
   const [isLeftPanelOpen, setIsLeftPanelOpen] = useState(() => {
     return JSON.parse(localStorage.getItem('isLeftPanelOpen')) || false;
@@ -16,6 +19,7 @@ const App = () => {
   }, [isLeftPanelOpen]);
 
   const toggleLeftPanel = () => setIsLeftPanelOpen(!isLeftPanelOpen);
+
 
   return (
     <Router>
@@ -34,19 +38,19 @@ const App = () => {
               </a>
             </div>
           </div>
-
+        <div>
+         <Link to='/Register'>
           <button className='accessButton'>
-            <Link to = "/UpIn">
              <span className="circle" aria-hidden="true">
                 <div className="user">
                   <i className="fa-regular fa-user"></i>
                  </div>
                </span>
              <span className="buttontext">Access</span> 
-            </Link>
           </button>
-
-          <div className="title"><Link to="/">SoulSwap</Link>
+         </Link>
+        </div>
+          <div className="title"><Link to="/Home">SoulSwap</Link>
           </div>
         </header>
 
@@ -82,6 +86,8 @@ const App = () => {
           <Route exact path='/JJK' element={<JJK />} />
           <Route exact path='/MHA' element={<MHA />} />
           <Route exact path='/CON' element={<CON />} />
+          <Route exact path='/Register' element={<Register/>}/>
+          <Route exact path='/Home' element={<Home/>}/>
         </Routes>
     </Router>
   );
