@@ -28,6 +28,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   gap: 20px;
 }
 .inputBx{
@@ -75,29 +76,66 @@
   color: #fff;
   text-decoration: none;
 }
-/*.links{
+.Btn-Home{
+  position: relative;
+  top: 10px;
+  left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  font-size: 30px;
+  font-weight: bold;
   width: 100px;
   height: 40px;
-  font-size: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #282936;
-  border-radius: 20px;
-  border: 2px solid #282936;
+  padding: 5px;
   color: #b4a9a9;
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  background-color: #282936;
+  border-radius: 12px;
 }
-.links:active{
-  box-shadow: 0 0 10px rgb(69, 73, 124);
+.btn-home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  animation: btn-home-animation 1s ease-in-out forwards;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.links:hover{
+
+@keyframes btn-home-animation{
+0%{
+transform: translatey(-15px);
+color: #fff;
+text-shadow: 0px 0px 10px;
+}
+10%{
+transform: translatey(0px);
+color: #fff;
+text-shadow: 0px 0px 10px;
+}
+40%{
+  opacity: 0;
+}
+60%{
+  opacity: 1;
   color: #fff;
-  text-shadow: 0px 0px 5px;
-  border-color: rgb(69, 73, 124);
-  box-shadow: 0 0 20px rgb(69, 73, 124);
-}*/
+  text-shadow: 0px 0px 10px;
+}
+80%{
+  color: #fff;
+  text-shadow: 0px 0px 10px;
+}
+
+}
+.Btn-Home:hover span:nth-child(1){
+  animation: btn-home-animation 1s ease-in-out forwards 0.2s;
+}
+.Btn-Home:hover span:nth-child(2){
+  animation: btn-home-animation 1s ease-in-out forwards 0.4s;
+}
+.Btn-Home:hover span:nth-child(3){
+  animation: btn-home-animation 1s ease-in-out forwards 0.6s;
+}
+.Btn-Home:hover span:nth-child(4){
+  animation: btn-home-animation 1s ease-in-out forwards 0.8s;
+}

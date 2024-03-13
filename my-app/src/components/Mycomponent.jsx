@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Preloader from './Preloader'; // прелоадер
+import { Link } from 'react-router-dom'
+import Preloader from './Preloader'; 
 
 const MyComponent = () => {
   const [loading, setLoading] = useState(true);
@@ -13,28 +13,31 @@ const MyComponent = () => {
 
   const [text, setText] = useState('Творчество, которое ты еще не видел!');
 
-    useEffect(() => {
-        const phrases = [
-            'Творчество, которое ты еще не видел!',
-            'Новые идеи для вдохновения!',
-            'Погрузись в мир искусства!',
-            'Открой для себя новые горизонты!'
-        ];
-        let index = 0;
+  useEffect(() => {
+    const phrases = [
+      'Творчество, которое ты еще не видел!',
+      'Новые идеи для вдохновения!',
+      'Погрузись в мир искусства!',
+      'Открой для себя новые горизонты!'
+    ];
+    let index = 0;
 
-        const interval = setInterval(() => {
-            index = (index + 1) % phrases.length;
-            setText(phrases[index]);
-        }, 5000);
+    const interval = setInterval(() => {
+      index = (index + 1) % phrases.length;
+      setText(phrases[index]);
+    }, 5000);
 
-        return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
-      {loading ? <Preloader /> : (
+      {loading ? (
+        <Preloader />
+      ) : (
         <div className="background">
-        <header className="topPanel">
+          
+          <header className="topPanel">
           <div className="topPanelAccess">
             <div className="socium">
               <a href="https://www.instagram.com/takemyeyehz/" target="_blank" rel="noopener noreferrer">
@@ -63,14 +66,13 @@ const MyComponent = () => {
           <div className="title"><Link to="/">SoulSwap</Link>
           </div>
         </header>
-
-        <div className="block-text">
-        <h1 className="conteiner">
-            <span className="Text-span">Что вы найдете здесь?</span>
-        </h1>
-        <h1 id="changingPhrase">{text}</h1>
-    </div>
-    </div>
+          <div className="block-text">
+            <h1 className="conteiner">
+              <span className="Text-span">Что вы найдете здесь?</span>
+            </h1>
+            <h1 id="changingPhrase">{text}</h1>
+          </div>
+        </div>
       )}
     </>
   );

@@ -345,9 +345,9 @@
     }
     .splide__slide img{
         position: relative;
+        
         width: 100%;
-        max-width: 400px;
-        height: 500px;
+        max-height: 500px;
         border-radius: 20px;
         object-fit: cover;
     }
@@ -361,7 +361,7 @@
        align-items: center;
        justify-content: center;
        position: absolute;
-       width: 400px;
+       width: auto;
        height: 100px;
        left: 0;
        right: 0;

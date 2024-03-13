@@ -1,12 +1,24 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
-
-import './reg.css';
+import { Link } from 'react-router-dom';
+import './styles/reg.css';
 
 const Register = () => {
   return (
     <div className='background'>
+      
+      <div className='Btn-Home'>
+      <Link to='/Home'>
+        <div className='btn-home'>
+        <span>H</span>
+        <span>o</span>
+        <span>m</span>
+        <span>e</span>
+        </div>
+        </Link>
+      </div>
+      
       <div className='Circle'>
         <div className="login">
           <h2>Login</h2>
