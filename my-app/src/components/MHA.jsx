@@ -13,7 +13,7 @@ export const MHA = () => {
   useEffect(() => {
     var splide = new Splide('.splide', {
       gap:120,
-      perPage: 1,
+      perPage: 3,
       perMove: 1,
       arrows: false,
       pagination: false,
@@ -28,6 +28,7 @@ export const MHA = () => {
       <Header />
       <Menu setIsLeftPanelOpen={setIsLeftPanelOpen} isLeftPanelOpen={isLeftPanelOpen}/>
 
+      <div className='mein-menu'>
       <div className="splide" id='mySplide' aria-label="Slide">
         <div className="splide__track">
           <ul className="splide__list">
@@ -49,6 +50,7 @@ export const MHA = () => {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 };

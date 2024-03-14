@@ -20,14 +20,13 @@
       background-color:rgba(0, 0, 0, 0.24) ;
       width: 100%;
       height: 100vh;
+      z-index: 0;
     }
     .title {
     color: #b4a9a9;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: absolute;
+    position: relative;
     font-size: 50px;
-    left: calc(50% - 50px);
-    top: 2px;
     font-weight: bold;
     }
     .title:hover {
@@ -38,7 +37,7 @@
     
 
     .accessButton {
-        position: absolute;
+        position: relative;
         display: inline-block;
         cursor: pointer;
         outline: none;
@@ -76,7 +75,7 @@
 
        .accessButton .circle .icon {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: absolute;
+        position: relative;
         top: 0;
         bottom: 0;
         margin: auto;
@@ -127,11 +126,14 @@
     }
     
     .topPanel {
+        position: relative;
         display: flex;
+        justify-content: space-between;
         width: 100%;
         height: 60px;
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(4px);
+        z-index: 1;
     }
     
     .leftPanel {
@@ -150,18 +152,24 @@
       visibility: hidden; /* Скрываем панель */
       opacity: 0; /* Скрываем панель */
       transition: visibility 2s, opacity 0.5s;
+      z-index: 1;
   }
   
   .leftPanel.open {
       visibility: visible; /* Показываем панель */
       opacity: 1; /* Показываем панель */
   }
+  .mein-menu{
+    position: relative;
+    width: 80%;
+    height: calc(100% - 60px);
+  }
     
     .btn {
         position: absolute;
         top: 70px;
         left: 17px;
-        z-index: 1;
+        z-index: 2;
         width: 150px;
         height: 50px;
         border-radius: 5px;
@@ -339,14 +347,16 @@
     }
     
     #mySplide{
-        position: absolute;
-        top: 20%;
-        left: 15%;
+        position: relative;
+        left: 20%;
+        top: 10%;
+        overflow: hidden;
+        z-index: 0;
     }
+
     .splide__slide img{
         position: relative;
-        
-        width: 100%;
+        width:100%;
         max-height: 500px;
         border-radius: 20px;
         object-fit: cover;
@@ -359,10 +369,11 @@
     .hover-info {
        display: flex;
        align-items: center;
-       justify-content: center;
+       justify-content: space-between;
        position: absolute;
        width: auto;
        height: 100px;
+       max-height: 100px;
        left: 0;
        right: 0;
        bottom: 0;
@@ -376,14 +387,15 @@
        opacity: 1; 
     }
     .background-price{
-      position: absolute;
-      top: 20px;
-      left: 20px;
+      position: relative;
+      left: 2%;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 250px;
-      height: 60px;
+      width: auto;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 60%;
       border-radius: 20px;
       background-color: #282936;
       border:  2px solid #282936;
@@ -402,9 +414,9 @@
       text-align: center;
       font-weight: bold;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 30px;
       color: #b4a9a9;
       transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      font-size: 24px;
     }
     
     .price:hover{
@@ -416,12 +428,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      width: 60px;
-      height: 60px;
+      position: relative;
+      width: 15%;
+      height: 60%;
       border-radius: 20px;
-      background-color: #282936;
-      right: 10px;
+      right: 2%;
       background-color: #282936;
       border:  2px solid #282936;
       transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -435,7 +446,7 @@
     }
     .Fa-Shop{
       display: flex;
-      font-size: 40px;
+      font-size: 34px;
       cursor: pointer;
     }
     .Fa-Shop:hover{

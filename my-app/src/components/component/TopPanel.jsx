@@ -19,6 +19,7 @@ const Header = () => {
               </a>
             </div>
           </div>
+          <div className="title"><Link to="/Home">SoulSwap</Link></div>
         <div>
          <Link to='/Register'>
           <button className='accessButton'>
@@ -31,8 +32,6 @@ const Header = () => {
           </button>
          </Link>
         </div>
-          <div className="title"><Link to="/Home">SoulSwap</Link>
-          </div>
         </header>
   )
 }

@@ -25,7 +25,6 @@ export default function Menu() {
         <span className="text">MENU</span>
       </button>
 
-      <div id="app">
         <div className={`leftPanel ${isLeftPanelOpen ? 'open' : ''}`} id="leftPanel">
           <h3 className="AM">Anime|Manga</h3>
           <div className='animemanga'>
@@ -38,7 +37,6 @@ export default function Menu() {
             <Link to="/CON">Call of the Night</Link>
           </div>
         </div>
-      </div>
     </div>
   );
 }

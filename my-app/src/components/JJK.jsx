@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react';
-import Header from './components/TopPanel';
-import Menu from './components/LeftPanel';
+import Header from './component/TopPanel';
+import Menu from './component/LeftPanel';
 import Splide from '@splidejs/splide';
+import { Link } from 'react-router-dom';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 export const JJK = () => {
@@ -12,7 +13,7 @@ export const JJK = () => {
 
   useEffect(() => {
     var splide = new Splide('.splide', {
-      gap: 120,
+      gap:100,
       perPage: 3,
       perMove: 1,
       arrows: false,
@@ -28,7 +29,7 @@ export const JJK = () => {
 
         <Header />
         <Menu setIsLeftPanelOpen={setIsLeftPanelOpen} isLeftPanelOpen={isLeftPanelOpen}/>
-    
+    <div className='mein-menu'>
     <div className="splide" id='mySplide' aria-label="Slide">
       <div className="splide__track">
         <ul className="splide__list">
@@ -41,7 +42,9 @@ export const JJK = () => {
                 </div>
                   <div className='background-Fa-Shop'>
                     <div className='Fa-Shop'> 
+                    <Link to='/Shop'>
                       <i class="fa-solid fa-cart-shopping"></i>
+                      </Link>
                   </div>
                 </div>
               </div>
@@ -49,6 +52,7 @@ export const JJK = () => {
           ))}
         </ul>
       </div>
+    </div>
     </div>
     </div>
   );

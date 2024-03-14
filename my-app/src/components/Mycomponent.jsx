@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import Preloader from './Preloader'; 
+import Preloader from './component/Preloader'; 
 
 const MyComponent = () => {
   const [loading, setLoading] = useState(true);
