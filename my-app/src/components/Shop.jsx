@@ -27,6 +27,16 @@ return(
               </div>
           </div>
       </div>
+        <div className='Right-About-Us'>
+          <div className='scrol-text'>
+            Postav scrol text
+          </div>
+            <div className='Animation-Infinite'>
+              <span className='row1'>-</span>
+              <span className='row2'>-</span>
+            </div>
+              
+        </div>
   </div>
 )
 }

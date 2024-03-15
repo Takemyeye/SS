@@ -35,9 +35,8 @@ const MyComponent = () => {
       {loading ? (
         <Preloader />
       ) : (
-        <div className="background">
-          
-          <header className="topPanel">
+      <div className="background">
+        <header className="topPanel">
           <div className="topPanelAccess">
             <div className="socium">
               <a href="https://www.instagram.com/takemyeyehz/" target="_blank" rel="noopener noreferrer">
@@ -51,7 +50,8 @@ const MyComponent = () => {
               </a>
             </div>
           </div>
-        <div>
+          <div className="title"><Link to="/">SoulSwap</Link></div>
+          <div>
          <Link to='/Register'>
           <button className='accessButton'>
              <span className="circle" aria-hidden="true">
@@ -63,8 +63,6 @@ const MyComponent = () => {
           </button>
          </Link>
         </div>
-          <div className="title"><Link to="/">SoulSwap</Link>
-          </div>
         </header>
           <div className="block-text">
             <h1 className="conteiner">
@@ -73,6 +71,7 @@ const MyComponent = () => {
             <h1 id="changingPhrase">{text}</h1>
           </div>
         </div>
+        
       )}
     </>
   );

@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  position: relative;
-  top: 60px;
-  left: 5%;
+  position: absolute;
+  top: 120px;
+  left: 3%;
   height: calc(85% - 60px);
   width: 60%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -87,5 +87,72 @@
   height: 90%;
   background-color: #282936;
   border-radius: 20px;
+}
+.Right-About-Us{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 120px;
+  right: 3%;
+  width: 30%;
+  height: calc(85% - 60px);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.scrol-text{
+  position: relative;
+  top: 6%;
+  display: flex;
+  width: 80%;
+  height: 20%;
+  background-color: #b4a9a9;
+  border-radius: 20px;
+}
+.Animation-Infinite{
+  position: relative;
+  top: 6%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 5%;
+}
+.row1{
+  position: relative;
+  font-size: 30px;
+  color: white;
+  animation: row1-anim 6s linear infinite ;
+}
+.row2{
+  position: relative;
+  top: 100%;
+  right: 0;
+  font-size: 30px;
+  color: white;
+  animation: row2-anim 6s linear infinite ;
+}
 
+@keyframes row1-anim{
+  0%{
+    left: 0%;
+  }
+  
+  50%{
+    left: 100%;
+  }
+  100%{
+    left: 0%;
+  }
+}
+
+@keyframes row2-anim{
+  0%{
+    right: 0%;
+  }
+  50%{
+    right: 100%;
+  }
+  100%{
+    right: 0%;
+  }
 }
