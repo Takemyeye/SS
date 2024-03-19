@@ -108,3 +108,9 @@
   .loader span:nth-child(8) {
     animation: preloader-color 2.4s linear forwards 1.2s;
   }
+
+  @media all and (max-width:500px) {
+    .loader{
+      font-size: 70px;
+    }
+  }

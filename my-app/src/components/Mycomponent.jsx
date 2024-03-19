@@ -65,10 +65,10 @@ const MyComponent = () => {
         </div>
         </header>
           <div className="block-text">
-            <h1 className="conteiner">
+            <div className="conteiner">
               <span className="Text-span">Что вы найдете здесь?</span>
-            </h1>
-            <h1 id="changingPhrase">{text}</h1>
+            </div>
+            <div className='changingPhrase'>{text}</div>
           </div>
         </div>
         

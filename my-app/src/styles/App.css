@@ -218,6 +218,7 @@
       }
     
     .socium{
+        position: relative;
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         color: #b4a9a9; 
         justify-content: center;
@@ -243,13 +244,13 @@
     }
     
     .block-text{
-        position: absolute;
-        top: 250px;
-        left: calc(50% - 250px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        align-content: center;
+        position: absolute;
+        gap: 15px;
+        top: 350px;
+        left: calc(50% - 350px);
         height: 150px;
         width: 700px;
         background-color: #0f0f0f8c;
@@ -257,36 +258,32 @@
         border-radius: 10px;
         cursor: default;
     }
-    .conteiner{
-        position: absolute;
+      .conteiner{
         display: flex;
-        left: calc(50% - 250px );
+        position: relative;
+        display: flex;
         text-align: center;
-        font-size: 50px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: #b4a9a9;
-        width:700px;
+        width: auto;
         height: auto;
       }
       .Text-span{
-        position: absolute;
+        position: relative;
+        font-size: 50px;
         display: flex;
         background: linear-gradient(to right, #5d4157, #a8caba);
         background-clip: text;
        -webkit-text-fill-color: transparent;
-        font-weight: 500;
+        font-weight: bold;
       }
-      #changingPhrase {
-        position: absolute;
-        left: 50%;
-        top: 40%;
-        transform: translateX(-50%);
+      .changingPhrase {
+        position: relative;
         text-align: center;
         font-size: 40px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: #b4a9a9;
         font-weight: 500;
-        width: 700px;
         height: auto;
         animation: changeText 5s ease infinite;
     }
@@ -449,4 +446,65 @@
       color: #fff;
       text-shadow: 0px 0px 10px;
       transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    }
+    @media all and (max-width:500px){
+      .accessButton{
+        width: 50px;
+      }
+      .user{
+        font-size: 38px;
+      }
+      .buttontext{
+        display: none;
+      }
+      .topPanelAccess{
+        top: 10%;
+        width: 100px;
+        padding: 2px;
+      }
+      .socium{
+        top: 10%;
+        font-size: 30px;
+        gap: 5px;
+      }
+      .title{
+        width: auto;
+        height: 34px;
+        top: 25%;
+        font-size: 30px;
+      }
+      .block-text{
+        width: 400px;
+        height: 80px;
+        left: 10%;
+        top: 30%;
+        gap: 5px;
+      }
+      .Text-span{
+        font-size: 25px;
+      }
+      .changingPhrase{
+        font-size: 23px;
+      }
+      .displayoff{
+        display: none;
+      }
+      .btn{
+        width: 100px;
+        transform: translateX(-60px);
+        border-radius: 25px;
+      }
+      .text{
+        display: none;
+      }
+      .leftPanel{
+        width: 130px;
+      }
+      .AM{
+        font-size: 18px;
+      }
+      .animemanga{
+        width: 120px;
+        font-size: 17px;
+      }
     }

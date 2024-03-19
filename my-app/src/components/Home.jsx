@@ -34,11 +34,13 @@ const Home = () => {
      <Menu setIsLeftPanelOpen={setIsLeftPanelOpen} isLeftPanelOpen={isLeftPanelOpen}/>
 
         </div>
+        <div className='displayoff'>
         <div className="block-text">
         <h1 className="conteiner">
             <span className="Text-span">Что вы найдете здесь?</span>
         </h1>
-        <h1 id="changingPhrase">{text}</h1>
+        <div className='changingPhrase'>{text}</div>
+    </div>
     </div>
     </>
   );
