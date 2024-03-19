@@ -447,6 +447,95 @@
       text-shadow: 0px 0px 10px;
       transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     }
+    .changeLanguage{
+      display: flex;
+      position: absolute;
+      top: 20px;
+      left: 15%;
+      width: auto;
+      height: 25px;
+      color: #b4a9a9;
+      border-radius: 20px;
+      z-index: 1;
+      font-size: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+    }
+   
+    
+    .changeLanguage::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color:#1e1e2b;
+      transition: 0.5s ease;
+    }
+    
+    .changeLanguage:hover {
+      color: #1e1e2b;
+      transition-delay: 0.5s;
+    }
+    
+    .changeLanguage:hover::before {
+      width: 100%;
+    }
+    
+    .changeLanguage::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 0;
+      width: 100%;
+      transition: 0.4s ease;
+      z-index: -1;
+    }
+    
+    .changeLanguage:hover::after {
+      height: 100%;
+      transition-delay: 0.4s;
+      color: aliceblue;
+    }
+    .Language{
+      position: absolute;
+      top: 35px;
+      display: flex;
+      flex-direction: column;
+      left: 5%;
+      width: 70px;
+      height: 65px;
+      padding: 5px;
+      border-radius: 20px;
+      background-color: #282936;
+      font-size: 18px;
+      color:#b4a9a9;
+      transition: all 0.60s cubic-bezier(0.65, 0, 0.076, 1);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .Language.open{
+      opacity: 1;
+      pointer-events: auto;
+    }
+    p{
+      width: auto;
+      height: auto;
+      cursor: pointer;
+    }
+    .iconLenguage{
+      font-size: 18px;
+      display: flex;
+      gap: 3px;
+      flex-direction: column;
+      position: absolute;
+      right: 5px;
+    }
     @media all and (max-width:500px){
       .accessButton{
         width: 50px;
