@@ -4,7 +4,7 @@ import Menu from './component/LeftPanel';
 
 const Home = () => {
   const [text, setText] = useState('...');
-  const [language, setLanguage] = useState(localStorage.getItem('language') || 'ing');
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'eng');
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
   const phrases = useMemo(() => {
@@ -21,7 +21,7 @@ const Home = () => {
         'Immergiti nel mondo dell`arte!',
         'Scopri nuovi orizzonti!'
       ]],
-      ing: ['What will you find here?', [
+      eng: ['What will you find here?', [
         'Creativity you have yet to see!',
         'New ideas for inspiration!',
         'Dive into the world of art!',
@@ -63,7 +63,7 @@ const Home = () => {
           Language
           <div className={`Language ${languageMenuOpen ? 'open' : ''}`}>
             <p onClick={() => handleLanguageChange('it')}>It</p>
-            <p onClick={() => handleLanguageChange('ing')}>Ing</p>
+            <p onClick={() => handleLanguageChange('ing')}>Eng</p>
             <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
             <div className='iconLenguage'>
             <i class="fa-solid fa-earth-europe"></i>
