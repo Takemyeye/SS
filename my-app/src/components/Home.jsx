@@ -58,12 +58,12 @@ const Home = () => {
       <div className="background">
         <Header />
         <Menu />
-        
+        <div className='displayOffLanguage'>
         <div className={`changeLanguage ${languageMenuOpen ? 'open' : ''}`} onClick={toggleLanguageMenu}>
-          Language
+          <p>Language</p>
           <div className={`Language ${languageMenuOpen ? 'open' : ''}`}>
             <p onClick={() => handleLanguageChange('it')}>It</p>
-            <p onClick={() => handleLanguageChange('ing')}>Eng</p>
+            <p onClick={() => handleLanguageChange('eng')}>Eng</p>
             <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
             <div className='iconLenguage'>
             <i class="fa-solid fa-earth-europe"></i>
@@ -71,6 +71,7 @@ const Home = () => {
             <i class="fa-solid fa-earth-asia"></i>
             </div>
           </div>
+        </div>
         </div>
         <div className='displayoff'>
           <div className="block-text">
