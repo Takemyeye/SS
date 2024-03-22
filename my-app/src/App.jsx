@@ -5,7 +5,7 @@ import './styles/Shop.css';
 import MyComponent from './components/Mycomponent';
 import { JJK } from './components/JJK';
 import { MHA } from './components/MHA';
-import { CON } from './components/CON';
+import { CON } from './components/CallofNight';
 import  Register  from './components/Register';
 import Home from './components/Home';
 import Shop from './components/Shop';
