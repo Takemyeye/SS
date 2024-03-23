@@ -295,6 +295,9 @@
         30% {
              opacity: 1; 
         }
+        80%{
+          opacity: 1;
+        }
         100% { 
             opacity: 0; 
         }
@@ -357,85 +360,6 @@
     .splide__list{
         transition: filter 0.5s ease-in-out;
         align-items: center;
-    }
-    
-    .hover-info {
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       position: absolute;
-       width: auto;
-       height: 100px;
-       max-height: 100px;
-       left: 0;
-       right: 0;
-       bottom: 0;
-       border-radius: 20px;
-       background-color: transparent;
-       backdrop-filter: blur(6px);
-       opacity: 0;
-       transition: opacity 1s, transform 1s ease-in-out;
-    }
-    .splide__slide:hover .hover-info {
-       opacity: 1; 
-    }
-    .background-price{
-      position: relative;
-      left: 2%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      padding-left: 10px;
-      padding-right: 10px;
-      height: 60%;
-      border-radius: 20px;
-      background-color: #282936;
-      border:  2px solid #282936;
-      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    }
-    .background-price:hover{
-      border-color: rgb(69, 73, 124);
-      box-shadow: 0 0 20px rgb(69, 73, 124);
-    }
-    .background-price:active{
-      box-shadow: 0 0 10px rgb(69, 73, 124);
-    }
-    .price{
-      position: relative;
-      display: flex;
-      text-align: center;
-      font-weight: bold;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      color: #b4a9a9;
-      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-      font-size: 24px;
-    }
-    
-    .price:hover{
-      color: #fff;
-      text-shadow: 0px 0px 5px;
-    }
-    
-    .background-Fa-Shop{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      width: 15%;
-      height: 60%;
-      border-radius: 20px;
-      right: 2%;
-      background-color: #282936;
-      border:  2px solid #282936;
-      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    }
-    .background-Fa-Shop:hover{
-      border-color: rgb(69, 73, 124);
-      box-shadow: 0 0 20px rgb(69, 73, 124);
-    }
-    .background-Fa-Shop:active{
-      box-shadow: 0 0 10px rgb(69, 73, 124);
     }
     .Fa-Shop{
       display: flex;

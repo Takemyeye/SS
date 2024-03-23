@@ -22,6 +22,7 @@ const App = () => {
         <Route exact path='/Register' element={<Register/>}/>
         <Route exact path='/Home' element={<Home/>}/>
         <Route exact path='/Shop' element={<Shop/>}/>
+        <Route exact path='/Shop/:selectedImage' element={<Shop />} />
       </Routes>
     </Router>
   );

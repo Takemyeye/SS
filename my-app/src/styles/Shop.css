@@ -29,7 +29,9 @@
   font-size: 50px;
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #b4a9a9;
+  background: linear-gradient(to right, #8bb97f, #948461);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .Shop-Description{
   position: relative;
@@ -76,8 +78,14 @@
   right: 2%;
   width: 20%;
   height: 90%;
-  background-color: #282936;
+  background: linear-gradient(to right, #6ead5e, #157a48);
   border-radius: 20px;
+}
+.Fa-Shop-Shop{
+  background: linear-gradient(to right, #7e7e7e, #000000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
 }
 .background-price-Shop{
   position: relative;
@@ -136,6 +144,9 @@
   font-size: 30px;
 }
 .dinamicText{
+  background: linear-gradient(to right, #598071, #74583e);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
 }
@@ -216,10 +227,11 @@
   transform: translateX(-30%);
   opacity: 0;
 }
-20% {
+
+20%{
   transform: translateX(0);
 }
-30%{
+40%{
   opacity: 1; 
 }
 90%{

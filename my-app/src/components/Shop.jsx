@@ -47,7 +47,7 @@ const Shop = () => {
     }, interval);
 
     return () => clearInterval(displayTextInterval);
-  }, [textIndex]);
+  }, [textIndex],textsToIterate) ;
 
   useEffect(() => {
     setDisplayText(textsToIterate[textIndex].charAt(0));
@@ -64,7 +64,9 @@ const Shop = () => {
     <div className="background">
       <Header />
       <div className='Main'>
-        <div className='Shop-Art'>ART</div>
+        <div className='Shop-Art'>
+         art
+        </div>
         <div className='Shop-Right'>
           <div className='Shop-Text'>
             <span>Information</span>
@@ -88,7 +90,7 @@ const Shop = () => {
         <div className='scrol-text'>
           <div className='Text-scrolColor'>
             <div className='Title-Text-Scrol'>
-                Любимцы публики
+                About Us
               </div>
                 <div className='blockDinamicText'>
                   <div className='dinamicText'>{displayText}</div>
@@ -100,7 +102,7 @@ const Shop = () => {
             <span className='row2'>-</span>
         </div>
         <div className='Image-scroll'>
-          <img src={images[currentIndex]} alt="" className="active" />
+          <img src={images[currentIndex]} alt="" className="active"  draggable="false"/>
         </div>
       </div>
     </div>

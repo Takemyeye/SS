@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 export const CON = () => {
-  const images = ['CON1-min.JPG', 'CON2-min.JPG', 'CON3-min.JPG'];
+  const con = ['CON1-min.JPG', 'CON2-min.JPG', 'CON3-min.JPG'];
   const desctiption = ['Ko Yamori: 10€','Ko Yamori: 15€', 'Ko Yamori: 15€'];
 
   const [isLeftPanelOpen, setIsLeftPanelOpen] = useState(false);
@@ -33,21 +33,11 @@ export const CON = () => {
     <div className="splide" id='mySplide' aria-label="Slide">
       <div className="splide__track">
         <ul className="splide__list">
-          {images.map((image, index) => (
+          {con.map((image, index) => (
             <li key={index} className="splide__slide">
-              <img src={image} alt={`Slide ${index + 1}`} />
-              <div className='hover-info'>
-                <div className='background-price'>
-                  <p className='price'>{desctiption[index]}<div className='Fa-price'></div></p>
-                </div>
-                  <div className='background-Fa-Shop'>
-                    <div className='Fa-Shop'> 
-                    <Link to='/Shop'>
-                      <i class="fa-solid fa-cart-shopping"></i>
-                      </Link>
-                  </div>
-                </div>
-              </div>
+              <Link to='/Shop'>
+                <img src={image} alt={`Slide ${index + 1}`} />
+              </Link>
             </li>
           ))}
         </ul>
