@@ -64,31 +64,29 @@ const Home = () => {
   };
 
   return (
-    <>
-      <div className="background">
-        <Header />
-        <Menu />
-        <div className={`changeLanguage ${languageMenuOpen ? 'open' : ''}`} onClick={toggleLanguageMenu}>
-          <p>Language</p>
-          <div className={`Language ${languageMenuOpen ? 'open' : ''}`}>
-            <p onClick={() => handleLanguageChange('it')}>It</p>
-            <p onClick={() => handleLanguageChange('eng')}>Eng</p>
-            <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
-            <div className='iconLenguage'>
-              <i className="fa-solid fa-earth-europe"></i>
-              <i className="fa-solid fa-earth-americas"></i>
-              <i className="fa-solid fa-earth-asia"></i>
-            </div>
+    <div className="background">
+      <Header />
+      <Menu />
+      <div className={`changeLanguage ${languageMenuOpen ? 'open' : ''}`} onClick={toggleLanguageMenu}>
+        <p>Language</p>
+        <div className={`Language ${languageMenuOpen && 'open'}`}>
+          <p onClick={() => handleLanguageChange('it')}>It</p>
+          <p onClick={() => handleLanguageChange('eng')}>Eng</p>
+          <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
+          <div className='iconLenguage'>
+            <i className="fa-solid fa-earth-europe"></i>
+            <i className="fa-solid fa-earth-americas"></i>
+            <i className="fa-solid fa-earth-asia"></i>
           </div>
-        </div>
-        <div className="block-text" key={languageChangeKey}> 
-          <div className="container">
-            <span className="Text-span">{principalPhrases[language]}</span>
-          </div>
-          <div className='changingPhrase'>{text}</div>
         </div>
       </div>
-    </>
+      <div className="block-text" key={languageChangeKey}> 
+        <div className="container">
+          <span className="Text-span">{principalPhrases[language]}</span>
+        </div>
+        <div className='changingPhrase'>{text}</div>
+      </div>
+    </div>
   );
 };
 

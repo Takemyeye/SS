@@ -16,13 +16,14 @@ const App = () => {
     <Router>
       <Routes>
         <Route exact path='/' element={<MyComponent/>} />
-        <Route exact path='/JJK' element={<JJK />} />
+        <Route exact path='/JJK' element={<JJK/>} />
         <Route exact path='/MHA' element={<MHA />} />
         <Route exact path='/CON' element={<CON />} />
-        <Route exact path='/Register' element={<Register/>}/>
-        <Route exact path='/Home' element={<Home/>}/>
-        <Route exact path='/Shop' element={<Shop/>}/>
-        <Route exact path='/Shop/:selectedImage' element={<Shop />} />
+        <Route exact path='/register' element={<Register/>}/>
+        <Route exact path='/home' element={<Home/>}/>
+        <Route path='/shop' element={<Shop/>}>
+          <Route path=':selectedImage' element={<Shop />} />
+        </Route>
       </Routes>
     </Router>
   );

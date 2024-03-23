@@ -8,17 +8,6 @@ const Register = () => {
   return (
     <div className='background'>
       
-      <div className='Btn-Home'>
-      <Link to='/Home'>
-        <div className='btn-home'>
-        <span>H</span>
-        <span>o</span>
-        <span>m</span>
-        <span>e</span>
-        </div>
-        </Link>
-      </div>
-      
       <div className='Circle'>
         <div className="login">
           <h2>Login</h2>
