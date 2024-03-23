@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Header from './component/TopPanel';
+import { useParams } from 'react-router-dom';
+
 
 const Shop = () => {
+  const { selectedImage } = useParams();
   const images = ['JJK1-min.JPG', 'JJK2-min.JPG', 
   'JJK3-min.JPG', 'JJK4-min.JPG', 'JJK5-min.JPG', 
   'JJK6-min.JPG', 'JJK7-min.JPG', 'JJK8-min.JPG', 
   'JJK9-min.JPG', 'JJK10-min.JPG', 'JJK11-min.JPG', 
   'JJK12-min.JPG', 'JJK13-min.JPG','MHA1-min.JPG',
   'CON1-min.JPG', 'CON2-min.JPG', 'CON3-min.JPG'];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(selectedImage);
   const [displayText, setDisplayText] = useState('');
   const [textIndex, setTextIndex] = useState(0);
 
@@ -65,7 +68,7 @@ const Shop = () => {
       <Header />
       <div className='Main'>
         <div className='Shop-Art'>
-         art
+         <img src={`/` + images[selectedImage]}/>
         </div>
         <div className='Shop-Right'>
           <div className='Shop-Text'>

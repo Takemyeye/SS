@@ -34,7 +34,7 @@ export const JJK = () => {
         <ul className="splide__list">
           {images.map((image, index) => (
             <li key={index} className="splide__slide">
-              <Link to='/Shop'>
+              <Link to={`/shop/${index}`}>
                 <img src={image} alt={`Slide ${index + 1}`} />
               </Link>
             </li>
