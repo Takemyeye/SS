@@ -1,6 +1,5 @@
 import React from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google'; 
-import "./styles/App.css"
 import { createRoot } from 'react-dom/client';
 import App from './App';
 

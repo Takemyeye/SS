@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faUser,faEarthEurope, faEarthAmericas, faEarthAsia } from '@fortawesome/free-solid-svg-icons';
 
-import Preloader from './component/Preloader';
+import Preloader from './Preloader';
 
 const MyComponent = () => {
   const [loading, setLoading] = useState(true);
@@ -111,9 +111,9 @@ const MyComponent = () => {
               <p onClick={() => handleLanguageChange('eng')}>Eng</p>
               <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
               <div className='iconLenguage'>
-              <FontAwesomeIcon icon={faEarthEurope} />
-            <FontAwesomeIcon icon={faEarthAmericas} />
-            <FontAwesomeIcon icon={faEarthAsia} />
+                <FontAwesomeIcon icon={faEarthEurope} />
+                <FontAwesomeIcon icon={faEarthAmericas} />
+                <FontAwesomeIcon icon={faEarthAsia} />
               </div>
             </div>
           </div>

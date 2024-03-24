@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 export const CON = () => {
-  const images = ['JJK1-min.JPG', 'JJK2-min.JPG', 
-  'JJK3-min.JPG', 'JJK4-min.JPG', 'JJK5-min.JPG', 
-  'JJK6-min.JPG', 'JJK7-min.JPG', 'JJK8-min.JPG', 
-  'JJK9-min.JPG', 'JJK10-min.JPG', 'JJK11-min.JPG', 
-  'JJK12-min.JPG', 'JJK13-min.JPG', 'MHA1-min.JPG',
-  'CON1-min.JPG', 'CON2-min.JPG','CON3-min.JPG'];
+  const images = ['art/JJK1-min.JPG', 'art/JJK2-min.JPG', 
+  'art/JJK3-min.JPG', 'art/JJK4-min.JPG', 'art/JJK5-min.JPG', 
+  'art/JJK6-min.JPG', 'art/JJK7-min.JPG', 'art/JJK8-min.JPG', 
+  'art/JJK9-min.JPG', 'art/JJK10-min.JPG', 'art/JJK11-min.JPG', 
+  'art/JJK12-min.JPG', 'art/JJK13-min.JPG', 'art/MHA1-min.JPG',
+  'art/CON1-min.JPG', 'art/CON2-min.JPG','art/CON3-min.JPG'];
 
   const [isLeftPanelOpen, setIsLeftPanelOpen] = useState(false);
 

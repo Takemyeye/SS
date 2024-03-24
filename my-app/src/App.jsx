@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './styles/App.css';
-import './styles/Preloader.css'
-import './styles/Shop.css';
 import MyComponent from './components/Mycomponent';
 import { JJK } from './components/JJK';
 import { MHA } from './components/MHA';
