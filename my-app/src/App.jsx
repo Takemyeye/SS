@@ -16,9 +16,9 @@ const App = () => {
     <Router>
       <Routes>
         <Route exact path='/' element={<MyComponent/>} />
-        <Route exact path='/JJK' element={<JJK/>} />
-        <Route exact path='/MHA' element={<MHA />} />
-        <Route exact path='/CON' element={<CON />} />
+        <Route exact path='/jjk' element={<JJK/>} />
+        <Route exact path='/mha' element={<MHA />} />
+        <Route exact path='/con' element={<CON />} />
         <Route exact path='/register' element={<Register/>}/>
         <Route exact path='/home' element={<Home/>}/>
         <Route path='/shop' element={<Shop/>}>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
-import { Link } from 'react-router-dom';
 import './styles/reg.css';
 
 const Register = () => {

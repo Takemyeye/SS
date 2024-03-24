@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faUser,faEarthEurope, faEarthAmericas, faEarthAsia } from '@fortawesome/free-solid-svg-icons';
+
 import Preloader from './component/Preloader';
 
 const MyComponent = () => {
@@ -71,33 +75,33 @@ const MyComponent = () => {
       ) : (
         <div className="background">
           <header className="topPanel">
-            <div className="topPanelAccess">
-              <div className="socium">
-                <a href="https://www.instagram.com/takemyeyehz/" target="_blank" rel="noopener noreferrer">
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://t.me/takemyeye" target="_blank" rel="noopener noreferrer">
-                  <i className="fa-brands fa-telegram"></i>
-                </a>
-                <a href="https://wa.me/3489026911" target="_blank" rel="noopener noreferrer">
-                  <i className="fa-brands fa-whatsapp"></i>
-                </a>
+      <div className="topPanelAccess">
+        <div className="socium">
+          <a href="https://www.instagram.com/takemyeyehz/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="https://t.me/takemyeye" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTelegram} />
+          </a>
+          <a href="https://github.com/Takemyeye" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>  
+        </div>
+      </div>
+      <div className="title"><Link to="/">SoulSwap</Link></div>
+      <div>
+        <Link to='/register'>
+          <button className='accessButton'>
+            <span className="circle" aria-hidden="true">
+            <div className="user">
+                <FontAwesomeIcon icon={faUser} />
               </div>
-            </div>
-            <div className="title"><Link to="/">SoulSwap</Link></div>
-            <div>
-              <Link to='/Register'>
-                <button className='accessButton'>
-                  <span className="circle" aria-hidden="true">
-                    <div className="user">
-                      <i className="fa-regular fa-user"></i>
-                    </div>
-                  </span>
-                  <span className="buttontext">Access</span> 
-                </button>
-              </Link>
-            </div>
-          </header>
+            </span>
+            <span className="buttontext">Access</span> 
+          </button>
+        </Link>
+      </div>
+    </header>
           <div className={`changeLanguage ${languageMenuOpen ? 'open' : ''}`} onClick={toggleLanguageMenu}>
             <div className='LanguageBckground'>
               <p>Language</p>
@@ -107,9 +111,9 @@ const MyComponent = () => {
               <p onClick={() => handleLanguageChange('eng')}>Eng</p>
               <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
               <div className='iconLenguage'>
-                <i className="fa-solid fa-earth-europe"></i>
-                <i className="fa-solid fa-earth-americas"></i>
-                <i className="fa-solid fa-earth-asia"></i>
+              <FontAwesomeIcon icon={faEarthEurope} />
+            <FontAwesomeIcon icon={faEarthAmericas} />
+            <FontAwesomeIcon icon={faEarthAsia} />
               </div>
             </div>
           </div>

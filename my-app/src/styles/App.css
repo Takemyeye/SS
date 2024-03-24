@@ -3,13 +3,13 @@
       padding: 0;
     }
     a {
-      text-decoration: none; /* Link linea sotto + color-_-*/
+     text-decoration: none; /* Link linea sotto + color-_-*/
      color: inherit;
      max-width: 145px;
     }
     
     body {
-      background: url(Art-1/backg.png);
+      background: url(Art-1/patern1.jpg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -77,7 +77,7 @@
         margin: 0;
         width: 3rem;
         height: 3rem;
-        background: #282936;
+        background-color: #282936a8;  
         border-radius: 1.625rem;
        }
 
@@ -177,7 +177,7 @@
         display: flex;
         align-items: center;
         border-radius: 10px;
-        background: #282936;
+        background-color: #282936a8;  
         color: #b4a9a9;
         cursor: pointer;
       }
@@ -221,22 +221,23 @@
         position: relative;
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         color: #b4a9a9; 
-        justify-content: center;
+        justify-content: space-around;
         align-items:center;
         display: flex;
         border-radius: 10px;
-        font-size: 36px;
+        font-size: 34px;
+        top: 5%;
         gap: 20px;
     }
     .topPanelAccess {
         width: 170px;
         height: 40px;
-        background: #282936;
+        background-color: #282936a8;  
         position: relative;
         border-radius: 65px;
         top: 10px;
         left: 10px;
-        border: 2px solid #282936;
+        padding: 2px;
     }
     .topPanelAccess:hover .socium{
         color: #fff;
@@ -253,7 +254,7 @@
         left: calc(50% - 350px);
         height: 150px;
         width: 700px;
-        background-color: #0f0f0f8c;
+        background-color: #282936a8;  
         backdrop-filter: blur(2px);
         border-radius: 10px;
         cursor: default;
@@ -272,7 +273,7 @@
         position: relative;
         font-size: 50px;
         display: flex;
-        background: linear-gradient(to right, #8bb97f, #948461);
+        background: linear-gradient(to right, #948E99, #2E1437);
         background-clip: text;
        -webkit-text-fill-color: transparent;
         font-weight: bold;
@@ -434,7 +435,7 @@
       height: 65px;
       padding: 5px;
       border-radius: 20px;
-      background-color: #282936;
+      background-color: #282936a8;  
       font-size: 18px;
       color:#b4a9a9;
       transition: all 0.60s cubic-bezier(0.65, 0, 0.076, 1);

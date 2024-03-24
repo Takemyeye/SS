@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Header from './component/TopPanel';
 import Menu from './component/LeftPanel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEarthEurope, faEarthAmericas, faEarthAsia } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   
@@ -74,9 +76,9 @@ const Home = () => {
           <p onClick={() => handleLanguageChange('eng')}>Eng</p>
           <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
           <div className='iconLenguage'>
-            <i className="fa-solid fa-earth-europe"></i>
-            <i className="fa-solid fa-earth-americas"></i>
-            <i className="fa-solid fa-earth-asia"></i>
+            <FontAwesomeIcon icon={faEarthEurope} />
+            <FontAwesomeIcon icon={faEarthAmericas} />
+            <FontAwesomeIcon icon={faEarthAsia} />
           </div>
         </div>
       </div>

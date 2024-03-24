@@ -28,13 +28,13 @@ export default function Menu() {
         <div className={`leftPanel ${isLeftPanelOpen ? 'open' : ''}`} id="leftPanel">
           <h3 className="AM">Anime|Manga</h3>
           <div className='animemanga'>
-            <Link to="/JJK">Jujutsu Kaisen</Link>
+            <Link to="/jjk">Jujutsu Kaisen</Link>
           </div>
           <div className='animemanga'>
-            <Link to="/MHA">MHA</Link>
+            <Link to="/mha">MHA</Link>
           </div>
           <div className='animemanga'>
-            <Link to="/CON">Call of the Night</Link>
+            <Link to="/con">Call of the Night</Link>
           </div>
         </div>
     </div>
