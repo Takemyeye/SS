@@ -483,20 +483,18 @@
         display: none;
       }
       .topPanelAccess{
-        top: 20%;
-        width: 80px;
-        height: 30px;
-        padding: 2px;
+        display: none;
       }
       .socium{
         top: 10%;
-        font-size: 25px;
+        font-size: 23px;
         gap: 5px;
       }
       .title{
         width: auto;
         height: 34px;
         top: 25%;
+        left: 4px;
         font-size: 30px;
       }
       .block-text{
@@ -516,6 +514,7 @@
         display: none;
       }
       .btn{
+        top: 7%;
         width: 100px;
         transform: translateX(-60px);
         border-radius: 25px;
@@ -537,14 +536,14 @@
         display: none;
       }
       .changeLanguage{
-        top: 11%;
-        left: 13px;
+        top: 4%;
+        left: 45%;
         font-size: 15px;
       }
       .Language{
+        position: absolute;
         width:50px ;
         height: 50px;
-        left: 2px;
         font-size: 13px;
       }
       .iconLenguage{
@@ -558,4 +557,5 @@
         padding: 3px;
         border-radius: 20px;
       }
+      
     }

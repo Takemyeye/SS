@@ -276,3 +276,48 @@
   opacity: 0; 
 }
 }
+@media all and (max-width:430px){
+.Right-About-Us{
+  display: none;
+}
+.Main{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  top: 15%;
+  width: 100%;
+  height: auto;
+  left: 0;
+}
+.Shop-Text{
+  font-size: 25px;
+}
+.Shop-Description{
+  width: 200%;
+  height: 300px;
+}
+.Character{
+  font-size: 22px;
+}
+.Materials{
+  font-size: 20px;
+}
+.Shop-Buy{
+  top: 15px;
+  width: 200%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+.price{
+  font-size: 25px;
+}
+.background-Fa-Shop-Shop{
+  width: 18%;
+}
+.Fa-Shop-Shop{
+  font-size: 20px;
+}
+}
