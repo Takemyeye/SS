@@ -5,7 +5,6 @@
     a {
      text-decoration: none; /* Link linea sotto + color-_-*/
      color: inherit;
-     max-width: 145px;
     }
     
     body {
@@ -145,15 +144,15 @@
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
       animation: slideIn 1s ease-in-out infinite;
-      visibility: hidden; /* Скрываем панель */
-      opacity: 0; /* Скрываем панель */
+      visibility: hidden; 
+      opacity: 0; 
       transition: visibility 2s, opacity 0.5s;
       z-index: 1;
   }
   
   .leftPanel.open {
-      visibility: visible; /* Показываем панель */
-      opacity: 1; /* Показываем панель */
+      visibility: visible; 
+      opacity: 1;
   }
   .mein-menu{
     position: relative;
@@ -258,7 +257,20 @@
         backdrop-filter: blur(2px);
         border-radius: 10px;
         cursor: default;
+        animation: chengePageDown 2s ease-in-out forwards;
     }
+    @keyframes chengePageDown{
+      0%{
+        opacity: 0;
+        transform: translateY(-1000px);
+      }
+      40%{
+        transform: translateY(0);
+      }
+      50%{
+        opacity: 1;
+      }
+      }
       .conteiner{
         display: flex;
         position: relative;
@@ -349,6 +361,7 @@
         top: 10%;
         overflow: hidden;
         z-index: 0;
+        animation: chengePageDown 3s ease-in-out forwards;
     }
 
     .splide__slide img{

@@ -1,24 +1,33 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo} from 'react';
 import './styles/Shop.css';
 import Header from './component/TopPanel';
 import { useParams } from 'react-router-dom';
+import { images, character, timeOfCreation, price, materials } from './component/Data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faEarthEurope, faEarthAmericas, faEarthAsia } from '@fortawesome/free-solid-svg-icons';
 
 const Shop = () => {
   const { selectedImage } = useParams();
-
-  const images = ['art/JJK1-min.JPG', 'art/JJK2-min.JPG', 
-  'art/JJK3-min.JPG', 'art/JJK4-min.JPG', 'art/JJK5-min.JPG', 
-  'art/JJK6-min.JPG', 'art/JJK7-min.JPG', 'art/JJK8-min.JPG', 
-  'art/JJK9-min.JPG', 'art/JJK10-min.JPG', 'art/JJK11-min.JPG', 
-  'art/JJK12-min.JPG', 'art/JJK13-min.JPG', 'art/MHA1-min.JPG',
-  'art/CON1-min.JPG', 'art/CON2-min.JPG','art/CON3-min.JPG'];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [animationTime, setAnimationTime] = useState(0);
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'eng');
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
+  const Information = useMemo (() => {
+    return{
+      ru: 'Информация',
+      it: 'Informazione',
+      eng: 'Information',
+    }
+  },[]);
+  const Price = useMemo(() => {
+    return {
+      ru: 'Цена',
+      it: 'Prezzo',
+      eng: 'Price',
+    };
+  }, []);
   const aboutUs = useMemo(() => {
     return {
       ru: 'О нас',
@@ -27,18 +36,21 @@ const Shop = () => {
     };
   }, []);
 
-  const [language, setLanguage] = useState(localStorage.getItem('language') || 'eng');
-  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const phrases = useMemo(() => {
     return {
-      ru: ['Оставьте отзыв нам интересно ваше мнение','Рекомендуйте нас вашим знакомым',
-        'Нарисованно  @TakeMyEye','Сайт писал  @TakeMyEye'
+      ru: [
+        'Оставьте отзыв нам интересно ваше мнение',
+        'Рекомендуйте нас вашим знакомым',
+        'Нарисованно  @TakeMyEye',
+        'Сайт писал  @TakeMyEye'
       ],
-      it: ['Lascia una recensione: la tua opinione ci interessa',
+      it: [
+        'Lascia una recensione: la tua opinione ci interessa',
         'Raccomandaci ai tuoi amici',
         'Disegnato da @TakeMyEye',
         'Sito web creato da @TakeMyEye'],
-      eng: ['Leave us a review: we value your opinion',
+      eng: [
+        'Leave us a review: we value your opinion',
         'Recommend us to your friends',
         'Drawn by @TakeMyEye',
         'Website created by @TakeMyEye']
@@ -66,7 +78,7 @@ const Shop = () => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
@@ -86,14 +98,18 @@ const Shop = () => {
         </div>
         <div className='Shop-Right'>
           <div className='Shop-Text'>
-            <span>Information</span>
+            <span>{Information[language]}</span>
           </div>
           <div className='Shop-Description'>
-            <span className='DescriptionText'>Description</span>
+            <div className='DescriptionText'>
+              <span className='Character'>{character[selectedImage]}</span> 
+                <span className='Materials' style={{ textAlign: 'center' }}>{materials[selectedImage]}</span>
+              <span>{timeOfCreation[selectedImage]}</span>
+              </div>
           </div>
           <div className='Shop-Buy'>
             <div className='background-price-Shop'>
-              <p className='price'>Price</p>
+              <div className='price'>{Price[language]}:{price[selectedImage]}</div>
             </div>
             <div className='background-Fa-Shop-Shop'>
               <div className='Fa-Shop-Shop'> 
@@ -116,13 +132,9 @@ const Shop = () => {
             </div>
           </div>
         </div>
-        <div className='Animation-Infinite'>
-          <span className='row1'>-</span>
-          <span className='row2'>-</span>
-        </div>
-        <div className='Image-scroll'>
-          <img src={'/' + images[currentIndex]} alt="" className="active" draggable="false"/>
-        </div>
+         <div className='Image-scroll'>
+            <img src={'/' + images[currentIndex]} alt="" className="active" draggable="false"/>
+         </div>
       </div>
       <div className={`changeLanguage ${languageMenuOpen ? 'open' : ''}`} onClick={toggleLanguageMenu}>
         <div className='LanguageBckground'>
@@ -130,16 +142,16 @@ const Shop = () => {
         </div>
         <div className={`Language ${languageMenuOpen ? 'open' : ''}`}>
           <p onClick={() => handleLanguageChange('it')}>It</p>
-          <p onClick={() => handleLanguageChange('eng')}>Eng</p>
-          <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
-          <div className='iconLenguage'>
-            <FontAwesomeIcon icon={faEarthEurope} />
-            <FontAwesomeIcon icon={faEarthAmericas} />
-            <FontAwesomeIcon icon={faEarthAsia} />
-          </div>
-        </div>
-      </div>
-    </div>
+            <p onClick={() => handleLanguageChange('eng')}>Eng</p>
+              <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
+                <div className='iconLenguage'>
+                  <FontAwesomeIcon icon={faEarthEurope} />
+                    <FontAwesomeIcon icon={faEarthAmericas} />
+                      <FontAwesomeIcon icon={faEarthAsia} />
+                    </div>
+                </div>
+              </div>
+            </div>
   );
 };
 
