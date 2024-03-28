@@ -82,11 +82,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="block-text" key={languageChangeKey}> 
-        <div className="container">
-          <span className="Text-span">{principalPhrases[language]}</span>
+      <div className='Menu-Home'>
+        <div className="block-text" key={languageChangeKey}> 
+          <div className="container">
+            <span className="Text-span">{principalPhrases[language]}</span>
+            </div>
+          <div className='changingPhrase'>{text}</div>
         </div>
-        <div className='changingPhrase'>{text}</div>
       </div>
     </div>
   );

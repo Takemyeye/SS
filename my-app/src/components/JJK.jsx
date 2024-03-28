@@ -18,7 +18,20 @@ export const JJK = () => {
     var splide = new Splide('.splide', {
       gap:100,
       perPage: 3,
-      perMove: 1,   
+      perMove: 1,
+      breakpoints: {
+        430: {
+          perPage: 1,
+          pagination: false,
+          arrows: false,
+        },
+        1024: {
+          perPage: 2,
+          pagination: false,
+          arrows: false,
+          gap:20,
+        },
+      },
     });
     splide.mount();
   }, []);

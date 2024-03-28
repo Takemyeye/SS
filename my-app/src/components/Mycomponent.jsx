@@ -117,11 +117,13 @@ const MyComponent = () => {
               </div>
             </div>
           </div>
+          <div className='main-menu-home'>
             <div className="block-text" key={languageChangeKey}> 
               <div className="container">
                 <span className="Text-span">{principalPhrases[language]}</span>
               </div>
                 <div className='changingPhrase'>{text}</div>
+            </div>
             </div>
         </div>
       )}

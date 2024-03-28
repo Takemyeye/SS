@@ -97,14 +97,12 @@ const Shop = () => {
         <img src={`/${images[selectedImage]}`} alt="" />
         </div>
         <div className='Shop-Right'>
-          <div className='Shop-Text'>
-            <span>{Information[language]}</span>
-          </div>
+          <div className='Shop-Text'>{Information[language]}</div>
           <div className='Shop-Description'>
             <div className='DescriptionText'>
-              <span className='Character'>{character[selectedImage]}</span> 
-                <span className='Materials' style={{ textAlign: 'center' }}>{materials[selectedImage]}</span>
-              <span>{timeOfCreation[selectedImage]}</span>
+              <div className='Character'>{character[selectedImage]}</div> 
+                <div className='Materials' style={{ textAlign: 'center' }}>{materials[selectedImage]}</div>
+              <div>{timeOfCreation[selectedImage]}</div>
               </div>
           </div>
           <div className='Shop-Buy'>

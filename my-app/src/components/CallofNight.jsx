@@ -20,10 +20,22 @@ export const CON = () => {
       gap:100,
       perPage: 3,
       perMove: 1,
-      arrows: false,
       pagination: false,
+      arrows: false,
+      breakpoints: {
+        430: {
+          perPage: 1,
+          pagination: false,
+          arrows: false,
+        },
+        1024: {
+          perPage: 2,
+          pagination: false,
+          arrows: false,
+          gap:20,
+        },
+      },
     });
-
     splide.mount();
   }, []);
 

@@ -70,6 +70,7 @@
 
 .Character{
   font-size: 30px;
+  text-align: center;
 }
 .Materials{
   font-size: 18px;
@@ -319,5 +320,52 @@
 }
 .Fa-Shop-Shop{
   font-size: 20px;
+}
+.changeLanguage{
+  top: 2.5%;
+}
+}
+@media all and (min-width: 431px) and (max-width: 768px){
+  .Right-About-Us{
+    display: none;
+  }
+  .Main{
+    width: 90%;
+  }
+  .Shop-Buy{
+    font-size: 23px;
+    gap: 0;
+  }
+  .background-Fa-Shop-Shop{
+    right: -10px;
+  }
+  .Shop-Text{
+    font-size: 40px;
+  }
+  .Character{
+    font-size: 25px;
+  }
+  .Materials{
+    font-size: 17px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px){
+  .Text-scrolColor{
+    gap: 0;
+  }
+  .Title-Text-Scrol{
+  font-size: 35px;
+}
+.dinamicText{
+  font-size: 23px;
+}
+.Shop-Buy{
+  font-size: 20px;
+  gap: 0;
+}
+.background-Fa-Shop-Shop{
+  right: -14px;
+  padding: 2px;
 }
 }
