@@ -6,7 +6,6 @@ import './styles/reg.css';
 const Register = () => {
   return (
     <div className='background'>
-      
       <div className='Circle'>
         <div className="login">
           <h2>Login</h2>

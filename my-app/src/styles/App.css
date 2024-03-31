@@ -3,10 +3,12 @@
       padding: 0;
     }
     a {
-     text-decoration: none; /* Link linea sotto + color-_-*/
+     text-decoration: none; 
      color: inherit;
     }
-    
+    ::selection {
+      background: rgba(0, 0, 0, 0.5);
+    }
     body {
       background: url(Art-1/patern1.jpg);
       background-size: cover;
