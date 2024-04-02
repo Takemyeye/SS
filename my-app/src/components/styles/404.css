@@ -1,0 +1,80 @@
+.Conteiner-404{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background: rgba(0, 0, 0, 0.74);
+}
+.preloader-404{
+  font-size: 100px;
+  font-weight:bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 0px 0px 20px;
+}
+.conteiner-1-404{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  top: -150px;
+  text-align: center;
+}
+.Error{
+  font-weight:bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 45px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.Page{
+  font-weight:bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.74);
+  animation: chengePageOpacity 3s ease forwards;
+
+}
+.Folling-down-404{
+  animation: Folling-down-404-anim 4s linear forwards;
+
+}
+.light {
+  animation: light-anim 4s linear infinite;
+}
+@keyframes light-anim{
+  29%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 0;
+  }
+  32%{
+    opacity: 1;
+  }
+  34%{
+    opacity: 0;
+  }
+  36%{
+    opacity: 1;
+  }
+}
+@keyframes Folling-down-404-anim{
+0%{
+  transform: translateY(-6000px);
+}
+30%{
+  transform: translateY(0);
+}
+33%{
+  transform: translateY(-10px);
+}
+35%{
+  transform: translateY(0);
+}
+}
