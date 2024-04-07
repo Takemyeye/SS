@@ -1,17 +1,27 @@
+const cookieParser = require('cookie-parser');
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
-// Обслуживание статических файлов из папки "build" вашего React-приложения
+app.use(express.json());
+app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Маршрут для обработки всех запросов и отправки файла index.html
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.post('/register', (req, res) => {
+  let token = req.body.token;
+  console.log(token);
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-// Запуск сервера
 app.listen(port, () => {
   console.log(`Сервер запущен на порту ${port}`);
 });

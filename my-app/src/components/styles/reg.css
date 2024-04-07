@@ -76,32 +76,12 @@
   color: #fff;
   text-decoration: none;
 }
-.Btn-Home{
-  position: relative;
-  top: 10px;
-  left: 10px;
+.Google-in-out{
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 30px;
-  font-weight: bold;
-  width: 100px;
-  height: 40px;
-  padding: 5px;
-  color: #b4a9a9;
-  background-color: #282936;
-  border-radius: 12px;
+  justify-content: space-around;
+  flex-direction: column;
 }
-.btn-home{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 40px;
-  animation: btn-home-animation 1s ease-in-out forwards;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 @keyframes btn-home-animation{
 0%{
 transform: translatey(-15px);
