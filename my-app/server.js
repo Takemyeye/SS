@@ -1,27 +1,34 @@
-const cookieParser = require('cookie-parser');
+const cookieSession = require("cookie-session");
 const express = require('express');
+const passport = require("passport");
+const cors = require("cors");
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cookieParser());
 
+app.use(cors({
+  origin:"http://localhost:3000",
+  path: '/',
+  credentials: 'include',
+}));
+
+app.use(cookieSession({
+  name: "session",
+  keys: ["lama"],
+  maxAge: 24 * 60 * 60 * 1000
+  })
+);
+
+app.use(passport.initialize(), passport.session());
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-app.post('/register', (req, res) => {
-  let token = req.body.token;
-  console.log(token);
-});
+app.use("/auth", require("./backend/routes/auth"));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Сервер запущен на порту ${port}`);
+app.listen(process.env.PORT || 3001, () => {
+  console.log(`Сервер запущен на порту ${process.env.PORT || 3001}`);
 });

@@ -18,6 +18,11 @@
 .env.test.local
 .env.production.local
 
+
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+//# Игнорировать файл с именем "auth.js"
+//auth.js

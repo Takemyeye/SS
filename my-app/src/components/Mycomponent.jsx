@@ -19,7 +19,7 @@ const MyComponent = () => {
       it: 'Cosa troverai qui?',
       eng: 'What will you find here?',
     };
-  }, []);
+  }, );
 
   const phrases = useMemo(() => {
     return {
@@ -36,7 +36,7 @@ const MyComponent = () => {
         'Dive into the world of art!',
         'Discover new horizons!']
     };
-  }, []);
+  }, );
 
   useEffect(() => {
     localStorage.setItem('language', language);
@@ -55,7 +55,7 @@ const MyComponent = () => {
     setTimeout(() => {
       setLoading(false);
     }, 5000);
-  }, []);
+  }, );
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);

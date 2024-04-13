@@ -17,7 +17,7 @@ const Home = () => {
       it: 'Cosa troverai qui?',
       eng: 'What will you find here?',
     };
-  }, []);
+  }, );
 
   const phrases = useMemo(() => {
     return {
@@ -34,7 +34,7 @@ const Home = () => {
         'Dive into the world of art!',
         'Discover new horizons!']
     };
-  }, []);
+  }, );
 
   useEffect(() => {
     localStorage.setItem('language', language);
@@ -52,7 +52,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
     }, 5000);
-  }, []);
+  }, );
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
